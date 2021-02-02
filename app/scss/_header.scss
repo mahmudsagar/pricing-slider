@@ -1,0 +1,42 @@
+.header {
+    text-align: center;
+    width: 100%;
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-image: url("/images/bg-pattern.svg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 75vh;
+        width: 100%;
+        z-index: -1;
+        @include breakpoint-up(medium){
+            height: 65vh;
+            background-position: 0%;
+        }
+    }
+
+    &__content {
+        background-image: url('/images/pattern-circles.svg');
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 9.8rem;
+        padding: 5.75rem 2.9735rem 4.125rem;
+
+        h2 {
+            font-size: 1.2rem;
+            margin-bottom: 1.125rem;
+        }
+
+        p {
+            width: 70%;
+            margin: 0 auto;
+        }
+    }
+}
