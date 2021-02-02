@@ -164,6 +164,12 @@ button:hover::before,
     height: 65vh;
     background-position: 0%;
   }
+  @-moz-document url-prefix() {
+    .header::before {
+      height: 100vh;
+      background-position: bottom;
+    }
+  }
 }
 
 .header__content {
@@ -264,6 +270,12 @@ button:hover::before,
   background-color: #eaeefb;
 }
 
+.card__input-slider input[type="range"]::-moz-range-progress {
+  background-color: #a5f3eb;
+  height: 0.625rem;
+  border-radius: 10px;
+}
+
 .card__input-slider input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
   position: relative;
@@ -312,6 +324,12 @@ button:hover::before,
   top: 5px;
   z-index: 0;
   height: .625rem;
+}
+
+@-moz-document url-prefix() {
+  .card__input-slider .custom-fill {
+    display: none;
+  }
 }
 
 .card__views {
